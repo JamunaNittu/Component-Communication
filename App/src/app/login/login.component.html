@@ -1,0 +1,46 @@
+
+
+<div class="container">
+  <h2>Welcome to Login</h2>
+  <form (ngSubmit)="Login()">
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" [(ngModel)]="email" placeholder="Enter email" name="email">
+    </div>
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control"[(ngModel)]="password" placeholder="Enter password" name="pwd">
+    </div>
+   
+    <button type="submit" class="btn btn-default" routerLink="dashboard">Submit</button><br><br>
+    <button type="submit" routerLink="dashboard">Employee</button>
+    <!-- <h1>Interpolation</h1> 
+    <input type="text" name="user" [(ngModel)]="name">
+    <h2>{{user1()}}</h2>
+    <h2>  {{name.length}}</h2>
+
+   <h1> Property Binding</h1>
+   <input type="text" [id]="myid" value="jamuna" >
+   <input type="text" [disabled]="isDisabled" id="{{myid}}" value="jamuna"> -->
+    <!-- or -->
+   <!-- <input type="text" bind-disabled="isDisabled" id="{{myid}}" value="jamuna">
+   <h1> *ngIf with Else block</h1> -->
+   <!-- <h2 *ngIf="displayName; else elseBlock">Nittu</h2>
+   <ng-template #elseBlock>
+     My surname 
+   </ng-template> -->
+
+   <!-- <div *ngIf="displayName;  then thenBlock; else elseBlock"></div>
+   <ng-template #thenBlock>if Block</ng-template>
+   <ng-template #elseBlock>Else Block</ng-template> -->
+
+   <h4>Data Communication</h4>
+    <app-dashboard (ChildEvent)="message=$event" [name]="ParentData"></app-dashboard>
+
+    {{message}}
+  
+  </form>
+  <p> Custom pipe : Multiplier: {{2 | custompipe: 10}}</p>
+</div>
+
+
